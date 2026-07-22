@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:navni_sangraha/core/splash/splash_screen_loader.dart';
+import 'package:navni_sangraha/screens/splash/splash_screen_loader.dart';
 
 
 class SplashScreen extends StatefulWidget {

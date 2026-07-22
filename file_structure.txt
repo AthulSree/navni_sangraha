@@ -4,60 +4,63 @@ lib/
 │
 ├── core/
 │   ├── app.dart
-│   ├── app_routes.dart
+│   ├── app_colors.dart
+│   ├── app_routes.dart (planned)
+│   ├── app_text_styles.dart
 │   ├── app_theme.dart
-│   └── constants.dart
+│   └── constants.dart (planned)
 │
 ├── screens/
 │   ├── splash/
-│   │     splash_screen.dart
+│   │   ├── splash_screen.dart
+│   │   └── splash_screen_loader.dart
 │   │
-│   ├── auth/
-│   │     login_screen.dart
+│   ├── auth/ (planned)
+│   │   └── login_screen.dart
 │   │
-│   ├── dashboard/
-│   │     dashboard_screen.dart
+│   ├── dashboard/ (planned)
+│   │   └── dashboard_screen.dart
 │   │
-│   ├── orders/
-│   │     order_list_screen.dart
-│   │     add_order_screen.dart
-│   │     order_details_screen.dart
+│   ├── orders/ (planned)
+│   │   ├── order_list_screen.dart
+│   │   ├── add_order_screen.dart
+│   │   └── order_details_screen.dart
 │   │
-│   ├── customers/
-│   │     customers_screen.dart
+│   ├── customers/ (planned)
+│   │   └── customers_screen.dart
 │   │
-│   ├── measurements/
-│   │     measurements_screen.dart
+│   ├── measurements/ (planned)
+│   │   └── measurements_screen.dart
 │   │
-│   ├── payments/
-│   │     payments_screen.dart
+│   ├── payments/ (planned)
+│   │   └── payments_screen.dart
 │   │
-│   └── settings/
-│         settings_screen.dart
+│   └── settings/ (planned)
+│       └── settings_screen.dart
 │
 ├── widgets/
-│   ├── primary_button.dart
-│   ├── custom_textfield.dart
-│   ├── app_card.dart
-│   ├── section_title.dart
-│   ├── stat_card.dart
-│   ├── order_tile.dart
+│   ├── primary_button.dart (planned)
+│   ├── custom_textfield.dart (planned)
+│   ├── app_card.dart (planned)
+│   ├── section_title.dart (planned)
+│   ├── stat_card.dart (planned)
+│   ├── order_tile.dart (planned)
 │   └── loaders/
-│         needle_thread_loader.dart
+│       └── needle_thread_loader.dart
 │
-├── models/
-│
-├── services/
-│
-├── utils/
+├── models/ (planned)
+├── services/ (planned)
+├── utils/ (planned)
 │
 └── assets/
+    ├── splas_logo.png
+    ├── splas_logo_fl.png
     ├── images/
     ├── icons/
     └── fonts/
 
 
-===== COLOR THEME ==========
+===== COLOR THEME =====
 | Element        | Color     |
 | -------------- | --------- |
 | Background     | `#0F0F13` |
@@ -66,5 +69,5 @@ lib/
 | Accent         | `#C084FC` |
 | Success        | `#10B981` |
 | Error          | `#EF4444` |
-| Text           | White     |
+| Text           | `#FFFFFF` |
 | Secondary Text | `#9CA3AF` |

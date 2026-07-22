@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navni_sangraha/core/splash/splash_screen.dart';
+import 'package:navni_sangraha/screens/splash/splash_screen.dart';
 
 
 class MyApp extends StatelessWidget {
