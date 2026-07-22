@@ -1,0 +1,70 @@
+lib/
+│
+├── main.dart
+│
+├── core/
+│   ├── app.dart
+│   ├── app_routes.dart
+│   ├── app_theme.dart
+│   └── constants.dart
+│
+├── screens/
+│   ├── splash/
+│   │     splash_screen.dart
+│   │
+│   ├── auth/
+│   │     login_screen.dart
+│   │
+│   ├── dashboard/
+│   │     dashboard_screen.dart
+│   │
+│   ├── orders/
+│   │     order_list_screen.dart
+│   │     add_order_screen.dart
+│   │     order_details_screen.dart
+│   │
+│   ├── customers/
+│   │     customers_screen.dart
+│   │
+│   ├── measurements/
+│   │     measurements_screen.dart
+│   │
+│   ├── payments/
+│   │     payments_screen.dart
+│   │
+│   └── settings/
+│         settings_screen.dart
+│
+├── widgets/
+│   ├── primary_button.dart
+│   ├── custom_textfield.dart
+│   ├── app_card.dart
+│   ├── section_title.dart
+│   ├── stat_card.dart
+│   ├── order_tile.dart
+│   └── loaders/
+│         needle_thread_loader.dart
+│
+├── models/
+│
+├── services/
+│
+├── utils/
+│
+└── assets/
+    ├── images/
+    ├── icons/
+    └── fonts/
+
+
+===== COLOR THEME ==========
+| Element        | Color     |
+| -------------- | --------- |
+| Background     | `#0F0F13` |
+| Surface        | `#1A1A22` |
+| Primary        | `#8B5CF6` |
+| Accent         | `#C084FC` |
+| Success        | `#10B981` |
+| Error          | `#EF4444` |
+| Text           | White     |
+| Secondary Text | `#9CA3AF` |
