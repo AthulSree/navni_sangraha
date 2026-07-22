@@ -49,6 +49,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
             
             // CustomTextField(label: "Username", hint: "Enter your username")
+            // CustomTextField(label: "Username", hint: "Enter your username", prefixIcon: Icons.person,),
+
+            // CustomTextField(label: "Username", hint: "Enter your username", prefixIcon: Icons.password, isPassword: true,)
           ],
         ),
       ),
