@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:navni_sangraha/screens/splash/splash_screen_loader.dart';
+import 'package:navni_sangraha/widgets/inputs/custom_text_field.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -45,6 +46,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     child: NeedleThreadLoader(),
                   )
                 : const SizedBox(width: 100, height: 100),
+
+            
+            // CustomTextField(label: "Username", hint: "Enter your username")
           ],
         ),
       ),
