@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navni_sangraha/core/app_colors.dart';
 import 'package:navni_sangraha/core/app_text_styles.dart';
+import 'package:navni_sangraha/widgets/buttons/primary_button.dart';
 import 'package:navni_sangraha/widgets/inputs/custom_text_field.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -21,6 +22,30 @@ class _LoginScreenState extends State<LoginScreen> {
     usernameController.dispose();
     passwordController.dispose();
     super.dispose();
+  }
+
+  Future <void> loginUser() async{
+
+    if(usernameController.text.trim().isEmpty){
+      showMsg("Username is required.");
+      return;
+    }
+
+    if(passwordController.text.trim().isEmpty){
+      showMsg("Password is required.");
+      return;
+    }
+
+  }
+
+  void showMsg(String msg) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(msg),
+        // backgroundColor: Colors.green,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
   }
 
   @override
@@ -51,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const Text(
                   "NAVNI SANGRAHA",
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.heading,
+                  style: AppTextStyles.primaryHeading,
                 ),
 
                 // Space
@@ -119,6 +144,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                   ),
+                ),
+
+                // Space
+                const SizedBox(height: 10),
+
+                // Login Button
+                PrimaryButton(
+                  text: "Login",
+                  icon: Icons.login,
+                  onPressed: loginUser,
                 ),
               ],
             ),

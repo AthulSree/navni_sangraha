@@ -10,16 +10,19 @@ class AppTextStyles {
     color: AppColors.textPrimary,
   );
 
+  static const primaryHeading = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primary,
+  );
+
   static const title = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w600,
     color: AppColors.textPrimary,
   );
 
-  static const body = TextStyle(
-    fontSize: 16,
-    color: AppColors.textPrimary,
-  );
+  static const body = TextStyle(fontSize: 16, color: AppColors.textPrimary);
 
   static const subtitle = TextStyle(
     fontSize: 14,

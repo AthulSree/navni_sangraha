@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navni_sangraha/core/app_colors.dart';
 import 'package:navni_sangraha/core/app_gradient.dart';
 
 enum ButtonType { primary, secondary, danger }
