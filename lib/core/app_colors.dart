@@ -19,4 +19,14 @@ class AppColors {
   static const success = Color(0xFF10B981);
 
   static const error = Color(0xFFEF4444);
+
+  static const secondary = Colors.grey;
+
+  static const danger = Colors.red;
 }
+
+// Notice that AppColors has a private constructor (AppColors._()), which prevents you from creating an instance of it 
+//(i.e., you cannot do var colors = AppColors();).
+
+// Because you cannot create instances of the class, any members must be marked as static so they can be accessed 
+//directly on the class name:

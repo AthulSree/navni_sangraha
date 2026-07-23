@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:navni_sangraha/screens/splash/splash_screen_loader.dart';
 import 'package:navni_sangraha/widgets/inputs/custom_text_field.dart';
-
+import 'package:navni_sangraha/widgets/buttons/primary_button.dart';
+import 'package:navni_sangraha/screens/auth/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,16 +14,26 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   bool showLoader = false;
 
+  Future<void> _startApp() async {
+    // show Loader
+    await Future.delayed(const Duration(seconds: 2));
+    setState(() {
+      showLoader = true;
+    });
+
+    // wait while the loader runs
+    await Future.delayed(const Duration(seconds:3));
+
+    if(!mounted) return;
+
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> const LoginScreen()));
+  }
+
   // Loads on runtime
   @override
   void initState() {
     super.initState();
-    // For delayed actions 
-    Future.delayed(const Duration(seconds: 2), () {
-      setState(() {
-        showLoader = true;
-      });
-    });
+    _startApp();
   }
 
   @override
@@ -47,7 +57,17 @@ class _SplashScreenState extends State<SplashScreen> {
                   )
                 : const SizedBox(width: 100, height: 100),
 
-            
+            // test widgets below
+            // PrimaryButton(
+            //   text: "SignIn",
+            //   onPressed: () {
+            //     print("Sign In btn pressed");
+            //   },
+            //   type: ButtonType.danger,
+            //   icon: Icons.login,
+            //   // isLoading: true,
+            // ),
+
             // CustomTextField(label: "Username", hint: "Enter your username")
             // CustomTextField(label: "Username", hint: "Enter your username", prefixIcon: Icons.person,),
 
@@ -58,5 +78,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
-
