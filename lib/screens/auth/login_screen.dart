@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navni_sangraha/core/app_colors.dart';
 import 'package:navni_sangraha/core/app_text_styles.dart';
+import 'package:navni_sangraha/screens/dashboard/dashboard_screen.dart';
 import 'package:navni_sangraha/widgets/buttons/primary_button.dart';
 import 'package:navni_sangraha/widgets/inputs/custom_text_field.dart';
 
@@ -35,6 +36,30 @@ class _LoginScreenState extends State<LoginScreen> {
       showMsg("Password is required.");
       return;
     }
+
+
+    setState((){
+      isLoading = true;
+    });
+
+    //wait for 3 seconds
+    // await Future.delayed(const Duration(seconds: 3));
+
+
+    if(!mounted) return;
+
+    // Login uthentication is to be done here <<<<<<<<<<<<<<<<<<<<
+    if(usernameController.text.trim() == "navni" && passwordController.text.trim() == "sang"){      
+      // Redirecting to Dashboard
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => DashboardScreen(userName: usernameController.text.trim(),)));
+    }else{
+      showMsg("Invalid Username or Password");
+      setState(() {
+        isLoading = false;
+      });
+    }
+
+
 
   }
 
@@ -116,6 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 30),
 
                 // Remember me
+                // --- Inkwell is used to handle the touch events on a non button widget
                 InkWell(
                   onTap: () {
                     setState(() {
@@ -154,6 +180,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: "Login",
                   icon: Icons.login,
                   onPressed: loginUser,
+                  isLoading: isLoading,
                 ),
               ],
             ),

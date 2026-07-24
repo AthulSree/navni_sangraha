@@ -28,6 +28,12 @@ class AppTextStyles {
     fontSize: 14,
     color: AppColors.textSecondary,
   );
+
+  static const dashboardUser = TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
 }
 
 

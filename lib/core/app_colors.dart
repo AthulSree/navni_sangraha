@@ -23,6 +23,12 @@ class AppColors {
   static const secondary = Colors.grey;
 
   static const danger = Colors.red;
+
+  static const card = Color(0xFF1E1E1E);
+
+  static const border = Color(0xFF2B2B2B);
+
+  static const subtitle = Colors.white70;
 }
 
 // Notice that AppColors has a private constructor (AppColors._()), which prevents you from creating an instance of it 
