@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:navni_sangraha/core/app_colors.dart';
+import 'package:navni_sangraha/core/app_text_styles.dart';
 import 'package:navni_sangraha/screens/dashboard/dashboard_hero.dart';
+import 'package:navni_sangraha/screens/dashboard/widgets/recent_order_card.dart';
 import 'package:navni_sangraha/screens/dashboard/widgets/statistic_card.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -23,7 +25,7 @@ class DashboardScreen extends StatelessWidget {
               Color(0xFF1A1A24),
               Color(0xFF0F0F13),
             ],
-            stops: [0.0, 0.35, 0.70, 1.0],
+            stops: [0.0, 0.10, 0.50, 1.0],
           ),
         ),
 
@@ -76,6 +78,37 @@ class DashboardScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+
+
+
+                // ==============================
+                // Recent Orders
+                // ==============================
+                SizedBox(height: 40),
+
+                Row(
+                  children: [
+                    Text("Recent Orders", style: AppTextStyles.title1,),
+                    Spacer(),
+                    Text("View All >", style: AppTextStyles.titleViewAll,)
+                  ],
+                ),
+
+                SizedBox(height: 12,),
+
+                RecentOrderCard(orderId: "NSD260725001", customerName: "Anjali", outfitType: "Lehenga", amount: "26000", status: "new", deliveryDate: "30-07-2026"),
+
+                SizedBox(height: 12,),
+
+                RecentOrderCard(orderId: "NSD260725001", customerName: "Anjali", outfitType: "Lehenga", amount: "26000", status: "progress", deliveryDate: "30-07-2026"),
+
+                SizedBox(height: 12,),
+                
+                RecentOrderCard(orderId: "NSD260725001", customerName: "Anjali", outfitType: "Lehenga", amount: "26000", status: "completed", deliveryDate: "30-07-2026"),
+
+                SizedBox(height: 12,),
+
+                RecentOrderCard(orderId: "NSD260725001", customerName: "Anjali", outfitType: "Lehenga", amount: "26000", status: "progress", deliveryDate: "30-07-2026"),
               ],
             ),
           ),

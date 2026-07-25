@@ -20,10 +20,18 @@ class DashboardHero extends StatelessWidget {
                         Expanded(
                           child: Row(
                             children: [
-                              // Navni Logo
-                              SizedBox(
-                                width: 46,
-                                height: 46,
+                              Container(
+                                width: 52,
+                                height: 52,
+                                padding: const EdgeInsets.all(4),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF0F172A), // Navy blue
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: AppColors.primaryDark, // Dark purple
+                                    width: 1.5,
+                                  ),
+                                ),
                                 child: Image.asset("assets/navni_sangraha_logo.png"),
                               ),
 
