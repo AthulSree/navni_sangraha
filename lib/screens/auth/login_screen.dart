@@ -4,6 +4,7 @@ import 'package:navni_sangraha/core/app_text_styles.dart';
 import 'package:navni_sangraha/screens/dashboard/dashboard_screen.dart';
 import 'package:navni_sangraha/widgets/buttons/primary_button.dart';
 import 'package:navni_sangraha/widgets/inputs/custom_text_field.dart';
+import 'package:flutter/services.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -179,7 +180,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 PrimaryButton(
                   text: "Login",
                   icon: Icons.login,
-                  onPressed: loginUser,
+                  onPressed: (){
+                    HapticFeedback.mediumImpact();
+                    loginUser();
+                  },
                   isLoading: isLoading,
                 ),
               ],

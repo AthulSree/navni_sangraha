@@ -52,7 +52,7 @@ class RecentOrderCard extends StatelessWidget {
           color: AppColors.card,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: getStatusColor().withValues(alpha: 0.2),
+            color: Colors.white.withValues(alpha: 0.04),
             width: 1,
           ),
         ),
@@ -112,6 +112,7 @@ class RecentOrderCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisSize: MainAxisSize.min,
               children: [
+                // Amount
                 Text(
                   "₹$amount",
                   style: const TextStyle(
@@ -121,12 +122,19 @@ class RecentOrderCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 12),
-                Text(
-                  deliveryDate,
-                  style: const TextStyle(
-                    color: AppColors.textSecondary,
-                    fontSize: 12,
-                  ),
+                // Date
+                Row(
+                  children: [
+                    Icon(Icons.calendar_today_outlined, size: 11, color: AppColors.textSecondary,),
+                    SizedBox(width: 4,),
+                    Text(
+                      deliveryDate,
+                      style: const TextStyle(
+                        color: AppColors.textSecondary,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
